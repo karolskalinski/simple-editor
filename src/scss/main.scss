@@ -1,16 +1,90 @@
 @import "_normalize";
 @import "_variables";
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  //align-items: center;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 95%);
+  color: $black;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  justify-content: center;
+  line-height: 24px;
+  min-height: 100vh;
+  text-align: left;
+}
+
+.main {
+  margin-top: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.edytor {
+  &__header {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 64px;
+  }
+}
+
+.footer {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.form {
+  &__div {
+    position: relative;
+  }
+
+  &__label {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: absolute;
+    &--save {
+      left: 0px;
+    }
+
+    &--load {
+      left: 30px;
+    }
+
+    &--trash {
+      right: 0px;
+    }
+  }
+
+  &__textarea {
+    border-radius: 4px;
+    height: 100%;
+    margin-top: 16px;
+    margin-bottom: 3px;
+    min-width: 544px;
+    min-height: 300px;
+    width: 100%;
+    resize: none;
+  }
 }
